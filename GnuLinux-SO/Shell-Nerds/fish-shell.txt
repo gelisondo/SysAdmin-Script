@@ -1,0 +1,49 @@
+Fish Shell:
+
+Esta buena para trabajar con GIT, resarta las carpetas master o fork.
+Es amigable con el usuario muy buen promp.
+-resalta sintaxis
+-auto sugerencias.
+-auto completado con "Tab"
+
+
+Fisher: plugin manager for fish
+shellder: Shell theme
+Nerd fonts: Powerline-patched font, SourceCode Pro.
+Z: Directory jumping
+
+peco: interactive filtering tool
+-ctrl-r Busca comandos en el history
+-ctrl-f Busca en los directorios de configuracion
+
+Exa: Un ls mas moderno.
+
+ghq: Local Git repository organizer.
+Como no encontramos la forma de instalacion nata para debian nos bajamos el vinario.
+  https://github.com/x-motemen/ghq
+  https://github.com/x-motemen/ghq/releases
+Al descomprimirlo lo movimos para /usr/local/bin
+
+
+
+Configuración de alias:
+#nano  /home/tokio/.config/fish/config.fish
+if status is-interactive
+	alias ll "exa -l -g --icons"
+	alias llt='ll --tree --level=2 -a'
+end
+
+
+Perfiles peco descargado del proyecto:
+https://github.com/craftzdog/dotfiles-public/tree/master/.config/fish/functions
+Cree los archivo en base al proyecto.
+
+fish_user_key_bindings.fish
+peco_change_directory.fish
+peco_select_history.fish
+
+
+Configuración por medio de interfaz Web para fish:
+$fish_config
+
+
