@@ -1,4 +1,8 @@
 #!/bin/bash
+#Finalidad: Administrar las listas Negras y blancas de SpamAssassin
+#Desarrollado: Guillermo Elisondo
+#Versión: 2.9
+#Ambiente: zimbra ose 8.8.15
 
 BUSCAR=$(whiptail --title "Agregar Reglas a las listas Negras y Blancas de SpamAssassin" --inputbox "Ingresa la dirección de correo o dominio a ingresar en los baners" 10 60 3>&1 1>&2 2>&3)
 
@@ -40,13 +44,13 @@ else
       1)
         #bloquear cuenta
         sed -i "s/# InBlackList/# InBlackList \nblacklist_from $BUSCAR/g" $PATHSAUSER
-        #zmamavisdctl restart
+        zmamavisdctl restart
         #whiptail --msgbox "$BUSCAR" 20 78
       ;;
       2)
       #Cuentas de confianza
         sed -i "s/# InWhiteList/# InWhiteList \nwhitelist_from $BUSCAR/g" $PATHSAUSER
-        #zmamavisdctl restart
+        zmamavisdctl restart
         #whiptail --msgbox "$BUSCAR" 20 78
       ;;
       *)

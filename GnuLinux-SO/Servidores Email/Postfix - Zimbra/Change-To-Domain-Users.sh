@@ -81,11 +81,11 @@ for dominio in "${arrayDominios[@]}"; do
 
 				#Cambiar el dominio de la cuenta Vieja. ra - rename account - ok
 				echo "Cambiando el dominio de la cuenta $cuenta a $cuentaNuevoDominio"
-				#zmprov ra $cuenta $cuentaNuevoDominio
+				zmprov ra $cuenta $cuentaNuevoDominio
 			      
   				#Creamos un aleas con el dominio anterior
 				echo "Agregamos el alias de la cuenta $cuentaNuevoDominio a $cuenta"
-				#zmprov aaa $cuentaNuevoDominio $cuenta
+				zmprov aaa $cuentaNuevoDominio $cuenta
 			    echo "$cuenta,$cuentaNuevoDominio" >> cuentasMigradas.csv
 			else
 			
