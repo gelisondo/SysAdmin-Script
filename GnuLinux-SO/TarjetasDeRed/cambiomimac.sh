@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo -n "Cambiando la Mac WIFI"
 ifconfig wlp2s0 down
 macchanger -a wlp2s0
