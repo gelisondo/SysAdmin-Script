@@ -10,7 +10,7 @@ echo "Uso del script generado en el servidor destino."
 echo "Este se tiene que ejecutar con el usuario zimbra"
 echo ">./sh2ladp.sh"
 
-domain="enba.edu.uy"  # change to your domain!
+domain="tudominio.lan"  # change to your domain!
 file="sh2ldap.sh"
 shadow="/etc/shadow" #lugar donde se encuentra el pa
 x=0
@@ -46,7 +46,7 @@ do
 	    if [ "$pass" != "*" ]
 	    then
 	        if [ "$pass" != "!" ]
-	        then
+	        thenmatch path_to_file" HEAD
 
 	            echo "zmprov ca $user@$domain temppasswordQAZXSW displayName $user">>$file
 	            echo "zmprov ma $user@$domain userPassword '{crypt}$pass'">>$file

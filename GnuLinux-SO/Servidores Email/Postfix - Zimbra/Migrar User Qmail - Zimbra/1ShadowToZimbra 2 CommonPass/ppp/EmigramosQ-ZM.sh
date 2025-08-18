@@ -7,7 +7,7 @@ LOGFILE="imapsync.log"
 USERQ="UQmail2.txt"
 DOMINIO="@tecnicos.lan"
 PASSWD="123123"
-HOST1="enba1.enba.edu.uy"
+HOST1="mail.tudominio.lan"
 HOST2="zenba.tecnicos.lan" 
 LUGAR=`pwd`
 
